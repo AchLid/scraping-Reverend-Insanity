@@ -28,7 +28,7 @@ def saveDescription():
     with open("D:/Desktop/Reverend Insanity/description.txt", 'w', encoding='utf-8') as f:
         f.write(description)
     print("File saved successfully")
+
 saveDescription()
 
-time.sleep(10)
 driver.quit()
