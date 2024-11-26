@@ -19,7 +19,7 @@ def saveDescription():
     readmore = driver.find_element(By.XPATH, "//span[@class='btn btn-link content-readmore less']")
     readmore.click()
 
-    WebDriverWait(driver, 15).until(
+    WebDriverWait(driver, 5).until(
         EC.presence_of_element_located((By.XPATH, "//div[@class='description-summary']/div[@class='summary__content show-more active']/p"))
     )
     time.sleep(5)
