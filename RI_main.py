@@ -52,5 +52,3 @@ def getTittle():
 def openChapter():
     chapterLink = getChapterLink()
     webbrowser.open_new(chapterLink)
-
-getTittle()
