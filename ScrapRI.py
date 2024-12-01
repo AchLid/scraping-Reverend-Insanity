@@ -19,7 +19,7 @@ def saveDescription():
     readmore = driver.find_element(By.XPATH, "//span[@class='btn btn-link content-readmore less']")
     readmore.click()
 
-    WebDriverWait(driver, 5).until(
+    WebDriverWait(driver, 15).until(
         EC.presence_of_element_located((By.XPATH, "//div[@class='description-summary']/div[@class='summary__content show-more active']/p"))
     )
     time.sleep(5)
@@ -28,7 +28,7 @@ def saveDescription():
     with open("D:/Desktop/Reverend Insanity/description.txt", 'w', encoding='utf-8') as f:
         f.write(description)
     print("File saved successfully")
-
 saveDescription()
 
+time.sleep(10)
 driver.quit()
